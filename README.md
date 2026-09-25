@@ -71,3 +71,21 @@ If your wallet supports both bridges, you have to specify `universal_url`, `deep
 Our goal is to represent accurate up-to-date list of all TON wallets that support TON Connect.
 
 In the future it would be a good idea to replicate wallet's info in a TON DNS record so that this repo simply lists the wallet domain names (to filter out spam), while developers have more direct control over the wallet parameters.
+{
+  "app_name": "tonkeeper",
+  "name": "Tonkeeper",
+  "image": "https://tonkeeper.com/assets/tonconnect-icon.png",
+  "tondns": "tonkeeper.ton",
+  "about_url": "https://tonkeeper.com",
+  "universal_url": "https://app.tonkeeper.com/ton-connect",
+  "deepLink": "tonkeeper-tc://",
+  "bridge": [
+     { "type": "sse", "url": "https://connect.ton.org/bridge" },
+     { "type": "js", "key": "tonkeeper" }
+  ],
+  "platforms": ["ios", "android", "chrome", "firefox", "safari", "windows", "macos", "linux"],
+  "features": [
+    { "name": "SendTransaction", "maxMessages": 4, "extraCurrencySupported": false },
+    { "name": "SignData", "types": ["text", "binary", "cell"] }
+  ]
+}
